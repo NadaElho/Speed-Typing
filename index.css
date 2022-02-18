@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+:root {
+  --first-color: #f3c507;
+  --second-color: #2f2e41;
+  --third-color: #e0d3d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--third-color);
+  font-family: "PT Sans", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.test,
+.result {
+  background-color: var(--second-color);
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--first-color);
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+.test .timers div {
+  color: var(--third-color);
+  width: 50px;
+  height: 50px;
+  border: var(--third-color) solid 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test .timers {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.test .required,
+button {
+  text-align: center;
+  background-color: var(--third-color);
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 7px;
+  align-self: center;
+  color: var(--second-color);
+}
+
+.test .required::selection,
+.test .timers :is(.timer, .words)::selection {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
+button {
+  cursor: pointer;
+  margin: 15px;
+  border-color: var(--first-color);
+  border-width: 5px;
+}
+img {
+  width: 400px;
+  align-self: flex-end;
+}
+.img {
+  padding: 10px 35px;
+}
+input {
+  margin: 15px;
+  padding: 10px;
+  font-weight: bold;
+}
+input:focus {
+  outline-color: var(--first-color);
+}
+.result div {
+  color: var(--third-color);
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.result,
+.required,
+input,
+#stop {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 100%;
+  }
+}
